@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --color-blue-dark: "#0B0D17";
+  --color-blue-light: "#D0D6F9";
+  --font-bellefair: "Bellefair", sans-serif;
+  --font-barlow: "Barlow", sans-serif;
+  --font-barlow-condensed: "Barlow Condensed", sans-serif;
+}
+
+.heading-xxl {
+  @apply font-bellefair text-white text-[5rem] lg:text-[9rem]
+}
+
+.heading-xl {
+  @apply font-bellefair text-white text-[3.5rem] md:text-[5rem] lg:text-[6rem]
+}
+
+.heading-lg {
+  @apply font-bellefair text-[1.5rem] md:text-[2.5rem] lg:text-[3.5rem]
+}
+
+.heading-md {
+  @apply font-bellefair text-[1.125rem] md:text-[1.5rem] lg:text-[2rem]
+}
+
+.caption {
+  @apply font-barlow-condensed text-[1.25rem] lg:text-[1.75rem]
+}
+
+.label-lg {
+  @apply font-bellefair text-[1rem] md:text-[1.75rem]
+}
+
+.label-sm {
+  @apply font-barlow-condensed text-[0.875rem]
+}
+
+.label-md {
+  @apply font-barlow-condensed text-[0.875rem] md:text-[1rem]
+}
+
+.body-text {
+  @apply font-barlow leading-[1.8] text-[1rem] lg:text-[1.125rem]
+}
