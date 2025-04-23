@@ -2,8 +2,10 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-sm: 375px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
   --color-blue-dark: "#0B0D17";
   --color-blue-light: "#D0D6F9";
   --font-bellefair: "Bellefair", sans-serif;
@@ -45,4 +47,8 @@
 
 .body-text {
   @apply font-barlow leading-[1.8] text-[1rem] lg:text-[1.125rem]
+}
+
+.transition-500 {
+  @apply transition-all duration-500 ease-in-out
 }
