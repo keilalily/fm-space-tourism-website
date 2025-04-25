@@ -1,9 +1,8 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Header from './components/Header';
-
 const Home = lazy(() => import("./pages/Home"));
+const Destination = lazy(() => import("./pages/Destination"));
 
 function App() {
   return (
@@ -11,6 +10,7 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/destination" element={<Destination />} />
         </Routes>
       </Suspense>
     </Router>
