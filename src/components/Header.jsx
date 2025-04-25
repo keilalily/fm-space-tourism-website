@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { navigation } from "../data/data";
-import { logo, iconHamburger } from "../assets/shared";
+import { shared } from "../assets/assets";
 import MobileNavigation from "./MobileNavigation";
 
 function Header() {
@@ -16,7 +16,7 @@ function Header() {
             <header className='flex justify-between items-center w-full bg-transparent p-6 md:p-0 xl:pt-10'>
                 {/* logo image - all breakpoints */}
                 <div className='flex items-center w-1/2 md:pl-10 md:gap-12 lg:gap-16 lg:pl-16'>
-                    <img src={logo} alt="logo" className='h-[2.5rem]'/>
+                    <img src={shared.logo} alt="logo" className='h-[2.5rem]'/>
                     {/* line - desktop xl breakpoint */}
                     <span className='hidden xl:flex items-center w-full -mr-8 z-10 h-[1px] bg-white opacity-25'></span>
                 </div>
@@ -30,7 +30,7 @@ function Header() {
                 >
                     <img
                         className='w-full h-full'
-                        src={iconHamburger}
+                        src={shared.iconHamburger}
                         alt="menu"
                     />
                 </button>
@@ -42,7 +42,7 @@ function Header() {
                         <a
                             key={item.id}
                             href={item.link}
-                            className={`label-md text-white flex gap-2 items-center h-24 hover:border-b-3 hover:border-white/50 ${activePage === item.id ? 'border-b-3 border-white' : ''}`}
+                            className={`font-barlow-condensed text-[1rem] text-white flex gap-2 items-center h-24 hover:border-b-3 hover:border-white/50 ${activePage === item.id ? 'border-b-3 border-white' : ''}`}
                             onClick={() => setActivePage(item.id)}
                         >
                             <span className='font-bold'>{item.id}</span>
