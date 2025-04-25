@@ -1,11 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { navigation } from "../data/data";
 import { shared } from "../assets/assets";
 import MobileNavigation from "./MobileNavigation";
 
 function Header() {
+    const location = useLocation();
+    const currentPath = location.pathname;
+    const currentPage = navigation.find(item => item.link === currentPath);
     const [activePage, setActivePage] = useState(navigation[0].id);
     const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        if (currentPage) {
+            setActivePage(currentPage.id);
+        } else {
+            setActivePage(navigation[0].id);
+        }
+    })
 
     const handleMenuClick = () => {
         setIsOpen(!isOpen);
@@ -42,8 +54,7 @@ function Header() {
                         <a
                             key={item.id}
                             href={item.link}
-                            className={`font-barlow-condensed text-[1rem] text-white flex gap-2 items-center h-24 hover:border-b-3 hover:border-white/50 ${activePage === item.id ? 'border-b-3 border-white' : ''}`}
-                            onClick={() => setActivePage(item.id)}
+                            className={`font-barlow-condensed text-[1rem] text-white flex gap-2 items-center h-24 border-b-3 border-transparent transition-500 ${activePage === item.id ? 'border-white' : 'hover:border-white/50'}`}
                         >
                             <span className='font-bold'>{item.id}</span>
                             {item.name.toLocaleUpperCase()}
