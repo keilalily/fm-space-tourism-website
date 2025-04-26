@@ -37,7 +37,7 @@ function Header() {
                 <button
                     type="button"
                     aria-label="toggle menu"
-                    className='flex md:hidden items-center w-6 h-6'
+                    className='flex md:hidden items-center w-6 h-6 hover:cursor-pointer'
                     onClick={handleMenuClick}
                 >
                     <img
