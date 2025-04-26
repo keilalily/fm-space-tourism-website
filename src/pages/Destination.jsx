@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PageLayout from "../components/layout/PageLayout";
 import { backgrounds } from "../assets/assets";
-import { useResponsiveMedia } from "../hooks/useResponsiveBackground";
+import { useResponsiveMedia } from "../hooks/useResponsiveMedia";
 import { destination } from "../data/data";
 
 export default function Destination() {

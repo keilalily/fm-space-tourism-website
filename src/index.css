@@ -12,6 +12,7 @@
   --font-barlow: "Barlow", sans-serif;
   --font-barlow-condensed: "Barlow Condensed", sans-serif;
   --tracking-15: 0.15em;
+  --animate-spin-slow: spin 4s linear infinite;
 }
 
 .transition-500 {
