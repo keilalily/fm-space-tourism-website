@@ -9,7 +9,7 @@ export default function PageLayout({ backgroundImage, children }) {
             }}
         >
             <Header />
-            <main className='flex flex-col flex-1 w-full h-full'>
+            <main className='flex flex-col flex-1 w-full'>
                 {children}
             </main>
         </div>
