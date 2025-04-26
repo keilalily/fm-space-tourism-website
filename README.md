@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/space-tourism-website-using-react-and-tailwind-css-MPXy1Mbf1s)
 - Live Site URL: [Live Site](https://keilalily.github.io/fm-space-tourism-website/)
 
 ## My process
