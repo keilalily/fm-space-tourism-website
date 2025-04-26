@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://keilalily.github.io/fm-social-links-profile/)
+- Live Site URL: [Live Site](https://keilalily.github.io/fm-space-tourism-website/)
 
 ## My process
 
