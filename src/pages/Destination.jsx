@@ -1,12 +1,12 @@
 import { useState } from "react";
 import PageLayout from "../components/layout/PageLayout";
 import { backgrounds } from "../assets/assets";
-import { useResponsiveBackground } from "../hooks/useResponsiveBackground";
+import { useResponsiveMedia } from "../hooks/useResponsiveBackground";
 import { destination } from "../data/data";
 
 export default function Destination() {
     const [activeSection, setActiveSection] = useState(destination[0].name);
-    const backgroundImage = useResponsiveBackground(backgrounds.destination);
+    const backgroundImage = useResponsiveMedia(backgrounds.destination);
 
     const handleSectionClick = (sectionName) => {
         setActiveSection(sectionName);
