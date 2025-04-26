@@ -1,9 +1,9 @@
 import PageLayout from "../components/layout/PageLayout";
-import { useResponsiveBackground } from "../hooks/useResponsiveMedia";
+import { useResponsiveMedia } from "../hooks/useResponsiveMedia";
 import { backgrounds } from "../assets/assets";
 
 export default function Home() {
-    const backgroundImage = useResponsiveBackground(backgrounds.home);
+    const backgroundImage = useResponsiveMedia(backgrounds.home);
 
     return (
         <PageLayout backgroundImage={backgroundImage}>
