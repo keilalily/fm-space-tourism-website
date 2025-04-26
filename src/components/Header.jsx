@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { navigation } from "../data/data";
 import { shared } from "../assets/assets";
 import MobileNavigation from "./MobileNavigation";
@@ -51,14 +51,14 @@ function Header() {
                     className='hidden w-3/4 md:flex items-center justify-end px-10 gap-12 -ml-16 bg-white/5 backdrop-blur-3xl lg:px-16 xl:w-1/2 xl:-ml-8'
                 >
                     {navigation.map((item) => (
-                        <a
+                        <Link
                             key={item.id}
-                            href={item.link}
+                            to={item.link}
                             className={`font-barlow-condensed text-[1rem] text-white flex gap-2 items-center h-24 border-b-3 border-transparent transition-500 ${activePage === item.id ? 'border-white' : 'hover:border-white/50'}`}
                         >
                             <span className='font-bold'>{item.id}</span>
                             {item.name.toLocaleUpperCase()}
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </header>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { navigation } from "../data/data";
 import { shared } from "../assets/assets";
 
@@ -23,16 +24,16 @@ function MobileNavigation({ isOpen, setIsOpen, activePage, setActivePage }) {
             </div>
             <div className='flex flex-col gap-8'>
                 {navigation.map((item) => (
-                    <a
+                    <Link
                         key={item.id}
-                        href={item.link}
+                        to={item.link}
                         className={`flex font-barlow-condensed text-[1rem] text-white gap-2 hover:border-r-3 hover:border-white/50 items-center ${activePage === item.id ? 'border-r-3 border-white' : ''}`}
                         onClick={() => setActivePage(item.id)}
                     >
                         
                         <span className='font-bold'>{item.id}</span>
                         {item.name.toLocaleUpperCase()}
-                    </a>
+                    </Link>
                 ))}
             </div>
         </nav>
