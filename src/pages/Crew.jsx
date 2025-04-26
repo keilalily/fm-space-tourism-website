@@ -1,12 +1,12 @@
 import { useState } from "react";
 import PageLayout from "../components/layout/PageLayout";
 import { backgrounds } from "../assets/assets";
-import { useResponsiveBackground } from "../hooks/useResponsiveBackground";
+import { useResponsiveMedia } from "../hooks/useResponsiveMedia";
 import { crew } from "../data/data";
 
-export default function Destination() {
+export default function Crew() {
     const [activeSection, setActiveSection] = useState(crew[0].name);
-    const backgroundImage = useResponsiveBackground(backgrounds.crew);
+    const backgroundImage = useResponsiveMedia(backgrounds.crew);
 
     const handleSectionClick = (sectionName) => {
         setActiveSection(sectionName);
@@ -21,7 +21,7 @@ export default function Destination() {
                     font-barlow-condensed text-white text-[1rem] tracking-15 
                     md:justify-start md:text[1.25rem] lg:text-[1.75rem]'
                 >
-                    <span className='font-bold opacity-25'>01</span>
+                    <span className='font-bold opacity-25'>02</span>
                     Meet your crew
                 </h2>
                 {/* section */}
@@ -55,8 +55,8 @@ export default function Destination() {
                                     <li
                                         key={tab.name}
                                         className={`
-                                            bg-white flex items-center rounded-full opacity-15
-                                            cursor-pointer transition-500 w-2.5 h-2.5 xl:w-4 xl:h-4 
+                                            bg-white rounded-full opacity-15 cursor-pointer
+                                            transition-500 w-2.5 h-2.5 xl:w-4 xl:h-4 
                                             ${activeSection === tab.name ? 'opacity-100' : 'hover:opacity-50'}`
                                         }
                                         onClick={() => handleSectionClick(tab.name)}

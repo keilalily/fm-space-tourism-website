@@ -1,5 +1,5 @@
 import PageLayout from "../components/layout/PageLayout";
-import { useResponsiveBackground } from "../hooks/useResponsiveBackground";
+import { useResponsiveBackground } from "../hooks/useResponsiveMedia";
 import { backgrounds } from "../assets/assets";
 
 export default function Home() {
