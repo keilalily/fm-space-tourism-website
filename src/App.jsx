@@ -9,7 +9,7 @@ const Technology = lazy(() => import("./pages/Technology"));
 
 function App() {
   return (
-    <Router>
+    <Router basename="/fm-space-tourism-website">
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Home />} />
