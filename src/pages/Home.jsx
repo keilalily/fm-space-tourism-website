@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PageLayout from "../components/layout/PageLayout";
 import { useResponsiveMedia } from "../hooks/useResponsiveMedia";
 import { backgrounds } from "../assets/assets";
@@ -32,8 +33,8 @@ export default function Home() {
                     </p>
                 </div>
                 <div className='flex flex-1 items-center justify-center w-full h-full lg:justify-end'>
-                    <a
-                        href='/destination'
+                    <Link
+                        to='/destination'
                         className='flex items-center justify-center h-full'
                     >
                         <button
@@ -51,7 +52,7 @@ export default function Home() {
                         >
                             Explore
                         </button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </PageLayout>
